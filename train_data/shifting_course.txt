@@ -1,0 +1,15 @@
+intent: shifting_course
+patterns:
+    - How can I shift my course?
+    - How to change my major?
+    - Process to shift program
+    - How do I change my program?
+    - I want to shift courses
+    - What is the process for shifting?
+    - Can I shift to another department?
+    - Shifting procedure in UB
+    - What’s the form for shifting?
+    - Is it hard to shift courses?
+    - Where to apply for a shift?
+responses:
+    - Fill out the Online Shifting Form, go through CCSD counseling, get endorsements from both Deans, and ARC will update your record.

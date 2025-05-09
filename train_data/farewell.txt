@@ -1,0 +1,17 @@
+intent: farewell
+patterns:
+    - Farewell
+    - Goodbye
+    - See you next time
+    - Talk to you later
+    - Catch you later
+    - Logging out now
+    - See you around
+    - Take it easy
+    - Peace out
+    - I'm out
+    - Bye
+responses:
+    - Farewell! Reach out anytime if you have more enrollment questions.
+    - See you around! Don’t hesitate to ask if you need help enrolling.
+    - Until next time! Come back if you need assistance with your UB application.

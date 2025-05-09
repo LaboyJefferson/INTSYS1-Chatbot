@@ -1,0 +1,16 @@
+intent: fee_waivers
+patterns:
+    - Can I get a fee waiver?
+    - What if I can't pay all the fees?
+    - Are there discounts or waivers for tuition?
+    - Can UB reduce my tuition fees?
+    - What financial help can I get?
+    - Are there tuition subsidies?
+    - Can I request a waiver?
+    - Do you allow partial payments?
+    - Is there a discount for low-income students?
+    - Fee assistance program available?
+    - Financial aid options for fees?
+    - Are there payment deferral options?
+responses:
+    - UB offers installment options and discounts like sibling and solo parent discounts. For fee waivers or financial hardship cases, contact the Student Accounts Office.

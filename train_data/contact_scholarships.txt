@@ -1,0 +1,13 @@
+intent: contact_scholarships
+patterns:
+    - Where can I ask about scholarships?
+    - How do I contact the scholarship office?
+    - UB scholarship office email?
+    - Who do I speak to about financial aid?
+    - How can I apply for a scholarship?
+    - Is there help for tuition fees?
+    - Scholarship contact UB
+responses:
+    - For scholarship-related inquiries, please contact the Scholarship Office of the University of Baguio.
+    - Visit https://ubaguio.edu and navigate to the Scholarship section or contact them directly through the portal at https://portal.ubaguio.edu.
+    - You may also ask about available scholarship programs via the student portal after logging in.

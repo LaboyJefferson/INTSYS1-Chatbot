@@ -1,0 +1,16 @@
+intent: late_enrollment
+patterns:
+    - Can I enroll late?
+    - Is late enrollment allowed?
+    - What happens if I miss the deadline?
+    - Is it possible to register after classes start?
+    - Can I still join even if classes already began?
+    - Can I still enroll if I'm late?
+    - What is the policy for late enrollees?
+    - Can I be accepted after the deadline?
+    - Is there an extension for enrollment?
+    - What should I do if I missed the enrollment period?
+    - Am I allowed to register late?
+    - Can I still submit my enrollment late?
+responses:
+    - Late enrollment is allowed during designated periods. Contact Admissions for specific timelines.

@@ -1,0 +1,24 @@
+intent: admission_requirements
+patterns:
+    - What are the requirements for enrollment?
+    - What documents do I need to enroll?
+    - What are the admission documents?
+    - Admission requirements list
+    - What do I need for application?
+    - Enrollment checklist?
+    - Required documents to enroll
+    - What should I prepare for enrollment?
+    - Is good moral required?
+    - Do I need my birth certificate?
+    - Where can I find the list of requirements?
+    - Needed papers for enrollment
+    - Admission papers needed
+responses:
+    - To complete your enrollment, you need the following documents:
+
+        -- - Completed admission and enrollment forms
+        -- - Original and photocopies of your academic records
+        -- - PSA-issued Birth Certificate
+        -- - Certificate of Good Moral Character
+        -- - Two 2x2 ID photos
+        -- - Additional documents as may be required by your specific program

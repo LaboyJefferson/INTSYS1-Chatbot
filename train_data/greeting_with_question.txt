@@ -1,0 +1,16 @@
+intent: greeting_with_question
+patterns:
+    - How is it going?
+    - How are you?
+    - How are things?
+    - What's going on?
+    - How have you been?
+    - How’s your day?
+    - You good?
+    - Are you okay?
+responses:
+    - I'm great, thank you! How can I help you today?
+    - Doing well! How about you?
+    - I'm doing fine, thanks for asking. How can I assist you?
+    - All good here! What can I do for you?
+    - I'm here and ready to help! What's your concern?

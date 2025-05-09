@@ -1,0 +1,16 @@
+intent: check_enrollment_status
+patterns:
+    - How do I check my enrollment status?
+    - Where can I view enrollment updates?
+    - Check enrollment progress
+    - Enrollment status check
+    - How do I know if I’m enrolled?
+    - How to view my enrollment?
+    - Can I confirm my enrollment online?
+    - Status of my enrollment?
+    - Is my registration complete?
+    - Where to confirm enrollment?
+    - Enrollment update on portal?
+    - How do I track my enrollment?
+responses:
+    - Log in to https://portal.ubaguio.edu using your student credentials to check enrollment status.

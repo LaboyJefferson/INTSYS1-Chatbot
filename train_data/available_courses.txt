@@ -1,0 +1,18 @@
+intent: available_courses
+patterns:
+    - What courses are offered?
+    - What majors are available?
+    - List of programs at UB
+    - Available courses in UB
+    - What can I study at UB?
+    - Programs offered by UB
+    - Do you offer engineering?
+    - What are your undergraduate programs?
+    - Courses in business and IT?
+    - Where can I see the course list?
+    - Full list of courses?
+    - Are health-related courses available?
+    - UB degree programs
+    - List of academic programs
+responses:
+    - UB offers a wide range of programs in Business, IT, Engineering, Health Sciences, Law, Education, and Arts. You can see the full list at https://www.finduniversity.ph/universities/university-of-baguio/undergraduate-courses/

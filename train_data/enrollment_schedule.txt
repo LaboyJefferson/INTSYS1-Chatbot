@@ -1,0 +1,19 @@
+intent: enrollment_schedule
+patterns:
+    - When does enrollment start?
+    - What is the enrollment schedule?
+    - What are the enrollment dates?
+    - When can I enroll?
+    - When is the enrollment period?
+    - When is the start of enrollment at UB?
+    - What date does enrollment begin?
+    - When should I enroll for the semester?
+    - Is enrollment open now?
+    - When will enrollment open for the next semester?
+    - Give me the enrollment timeline.
+    - What are the key dates for enrollment?
+    - How long is the enrollment period?
+    - Has enrollment started already?
+    - When can students start enrolling?
+responses:
+    - Reservations for the First Semester of SY 2025–2026 opened on February 10, 2025. For other departments and levels, check UB's official announcements or contact admissions.

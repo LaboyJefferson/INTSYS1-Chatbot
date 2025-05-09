@@ -1,0 +1,19 @@
+intent: add_drop_subject
+patterns:
+    - How do I add a subject?
+    - How to add subjects?
+    - Steps to add a class
+    - How do I drop a subject?
+    - Steps to drop a subject
+    - How to change a subject?
+    - Where do I submit the dropping form?
+    - Subject change process
+    - Can I remove a subject?
+    - I want to drop one subject
+    - How can I add another class?
+    - Where to process add/drop?
+    - Is adding and dropping done online?
+    - Add subject in portal
+    - Drop subject from portal
+responses:
+    - You can add or drop a subject via the online portal or manually using the QF-ARC-006 form. Submit the form to your Dean, then it goes to SAO and ARC for updating.

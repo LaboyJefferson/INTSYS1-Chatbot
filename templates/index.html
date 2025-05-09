@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIT Enrollment Helper</title>
+  <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div>
+    <div class="sidebar-header">
+      <img src="/static/images/logo.png" alt="Logo" class="logo" />
+      <h1>SIT Helper</h1>
+      <img src="/static/images/sidebar.png" alt="Toggle Sidebar" class="sidebar-toggle" onclick="toggleSidebar()" />
+    </div>
+    <div class="chat-history" id="chatHistoryList">
+      <div class="chat-entry">
+        <button onclick="startNewChat()">New Chat</button>
+        <img src="/static/images/delete.png" alt="Delete" onclick="deleteChat(0)" />
+      </div>
+    </div>
+  </div>
+  <button class="start-chat-button" onclick="startNewChat()">Start New Chat</button>
+</div>
+
+<div class="chat-container">
+  <div class="top-center">
+    <img src="/static/images/logo.png" alt="Logo" class="logo" />
+    <h2>Welcome to the SIT Enrollment Helper</h2>
+    <div class="question-buttons">
+      <button onclick="sendQuick('What are the courses offered?')">What are the courses offered?</button>
+      <button onclick="sendQuick('What are the requirements needed to enroll?')">What are the requirements needed to enroll?</button>
+      <button onclick="sendQuick('How do I apply for scholarships?')">How do I apply for scholarships?</button>
+    </div>
+  </div>
+
+  <div class="chatbox" id="chatbox"></div>
+
+  <div class="input-area">
+    <input type="text" id="messageInput" placeholder="Type your message..." required />
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<script>
+  let chatHistories = [];
+  let currentChat = [];
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("collapsed");
+  }
+
+  async function sendMessage(msg = null) {
+    const input = document.getElementById("messageInput");
+    const message = msg || input.value.trim();
+    if (!message) return;
+
+    appendChat("user", message);
+    input.value = "";
+
+    const response = await fetch("/get", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+    appendChat("bot", data.response);
+  }
+
+  function sendQuick(msg) {
+    sendMessage(msg);
+  }
+
+  function appendChat(sender, message) {
+    const chatbox = document.getElementById("chatbox");
+    const div = document.createElement("div");
+    div.className = `message ${sender}`;
+    div.innerHTML = sender === "bot"
+      ? `<div class="bubble"><strong>CODE-E</strong><p style="white-space: pre-line;">${message}</p></div><img src="/static/images/logo.png" alt="Bot" class="avatar" />`
+      : `<img src="/static/images/userIcon.png" alt="User" class="avatar" /><div class="bubble"><p>${message}</p></div>`;
+    chatbox.appendChild(div);
+    chatbox.scrollTop = chatbox.scrollHeight;
+    currentChat.push({ sender, message });
+    saveToLocalStorage();
+  }
+
+  function startNewChat() {
+    if (currentChat.length > 0) {
+      const timestamp = new Date().toLocaleTimeString();
+      chatHistories.push({ title: `Chat at ${timestamp}`, messages: [...currentChat] });
+      saveToLocalStorage();
+      renderChatHistory();
+    }
+    currentChat = [];
+    clearChat();
+    enableInput();
+    saveToLocalStorage();
+  }
+
+  function clearChat() {
+    document.getElementById("chatbox").innerHTML = "";
+  }
+
+  function renderChatHistory() {
+    const historyList = document.getElementById("chatHistoryList");
+    historyList.innerHTML = "";
+    chatHistories.forEach((chat, index) => {
+      const container = document.createElement("div");
+      container.className = "chat-entry";
+
+      const btn = document.createElement("button");
+      btn.textContent = chat.title;
+      btn.onclick = () => loadChat(index);
+
+      const deleteIcon = document.createElement("img");
+      deleteIcon.src = "/static/images/delete.png";
+      deleteIcon.alt = "Delete";
+      deleteIcon.onclick = (event) => {
+        event.stopPropagation();
+        deleteChat(index);
+      };
+
+      container.appendChild(btn);
+      container.appendChild(deleteIcon);
+      historyList.appendChild(container);
+    });
+  }
+
+  function deleteChat(index) {
+    const confirmDelete = confirm("Are you sure you want to delete this chat history?");
+    if (confirmDelete) {
+      chatHistories.splice(index, 1);
+      saveToLocalStorage();
+      renderChatHistory();
+    }
+  }
+
+  function loadChat(index) {
+    clearChat();
+    const chat = chatHistories[index];
+    chat.messages.forEach(m => appendChat(m.sender, m.message));
+    currentChat = [...chat.messages];
+    enableInput();
+  }
+
+  function saveToLocalStorage() {
+    localStorage.setItem("chatHistories", JSON.stringify(chatHistories));
+    localStorage.setItem("currentChat", JSON.stringify(currentChat));
+  }
+
+  function loadFromLocalStorage() {
+    const savedHistories = localStorage.getItem("chatHistories");
+    const savedCurrent = localStorage.getItem("currentChat");
+
+    if (savedHistories) {
+      chatHistories = JSON.parse(savedHistories);
+      renderChatHistory();
+    }
+
+    if (savedCurrent) {
+      currentChat = JSON.parse(savedCurrent);
+      currentChat.forEach(m => appendChat(m.sender, m.message));
+    }
+  }
+
+  window.onload = loadFromLocalStorage;
+
+  function disableInput() {
+    document.getElementById("messageInput").disabled = true;
+    document.querySelector(".input-area button").disabled = true;
+  }
+
+  function enableInput() {
+    document.getElementById("messageInput").disabled = false;
+    document.querySelector(".input-area button").disabled = false;
+  }
+
+  document.getElementById("messageInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sendMessage();
+    }
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+intent: entrance_exam
+patterns:
+    - Is there an entrance exam?
+    - Do I need to take an entrance test?
+    - Is an exam required to enter UB?
+    - Do I have to take a test to enroll?
+    - Do freshmen take an entrance exam?
+    - Does UB conduct entrance tests?
+    - Are entrance exams needed?
+    - Any tests before enrollment?
+    - Do transferees need to take an exam?
+responses:
+    - No entrance exams are required for admission to UB.

@@ -1,0 +1,14 @@
+intent: contact_admissions
+patterns:
+    - Who do I contact for questions about enrollment?
+    - Where can I ask about enrollment?
+    - How do I get help from admissions?
+    - Who can I call about enrollment?
+    - Admissions office contact number?
+    - How do I reach the admissions office?
+    - How can I speak with someone in admissions?
+    - Email address for admissions?
+    - UB contact for student support?
+responses:
+    - You may contact the University of Baguio Admissions and Records Center via email at admissions@ubaguio.edu.
+    - Visit https://ubaguio.edu for more information on enrollment procedures and contact details.

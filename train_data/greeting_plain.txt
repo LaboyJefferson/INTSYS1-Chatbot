@@ -1,0 +1,14 @@
+intent: greeting_plain
+patterns:
+    - Hello
+    - Hi
+    - Greetings!
+    - Hii
+    - Hey
+    - Yo
+responses:
+    - Hello! How can I help you today?
+    - Hi! How can I help you today?
+    - Greetings!! How can I help you today?
+    - Hi!! How can I help you today?
+    - Hi there! How may I assist you?

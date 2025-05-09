@@ -1,0 +1,14 @@
+intent: payment_modes
+patterns:
+    - What are the available modes of payment?
+    - How can I pay my fees?
+    - What payment methods can I use?
+    - What are the ways to pay my tuition?
+    - Can I pay online or in person?
+    - Are there different payment options?
+    - How do I pay through the bank?
+    - Which banks accept tuition payments?
+    - Do you accept digital payments?
+responses:
+    - The payment can be done through online or on-site.
+    -- Payment methods include Union Bank Online, BPI Quickpay, and MetroBank Bills Pay.

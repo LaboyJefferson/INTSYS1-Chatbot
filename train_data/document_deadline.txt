@@ -1,0 +1,15 @@
+intent: document_deadline
+patterns:
+    - When is the deadline to submit documents?
+    - Do I need to submit documents on time?
+    - What's the last day to pass my papers?
+    - What’s the cut-off for document submission?
+    - Do I need to submit my requirements immediately?
+    - Is there a deadline for paperwork?
+    - How late can I submit my enrollment documents?
+    - Can I pass my documents after enrolling?
+    - Final deadline for enrollment documents?
+    - What happens if I submit my documents late?
+    - Submission schedule for required documents?
+responses:
+    - Document deadlines vary by program. Coordinate with the Admissions and Records Center for accurate information.

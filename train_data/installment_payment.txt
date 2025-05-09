@@ -1,0 +1,12 @@
+intent: installment_payment
+patterns:
+    - Can I pay in installments?
+    - Does UB allow installment payments?
+    - Can I split my tuition payments?
+    - Is there an installment plan for tuition?
+    - Can I pay tuition fees in smaller amounts?
+    - Can I pay my tuition in installments instead of one full payment?
+    - Are partial payments allowed for tuition?
+    - Is there an option to pay tuition fees in installments?
+responses:
+    - Yes, UB allows installment payments for tuition and fees.

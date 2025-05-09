@@ -1,0 +1,15 @@
+intent: payment_process
+patterns:
+    - What is the payment process?
+    - How do I pay my tuition?
+    - Where can I pay my school fees?
+    - How do I settle my school balance?
+    - Can I pay online?
+    - Is there an online payment option?
+    - How much do I need to pay to enroll?
+    - What are the payment options available?
+    - Where do I pay my tuition fees?
+    - Do I need to go to the school to pay?
+    - How do I get a payment assessment?
+responses:
+    - You can pay your fees through the UBaguio.edu portal using the online payment system or directly at the Cashier Office at the Legacy building. If you are planning to pay on site, make sure to fill out the pink form before proceeding with payment.

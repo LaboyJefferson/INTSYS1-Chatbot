@@ -1,0 +1,12 @@
+intent: enrollment_process
+patterns:
+    - What is the enrollment process?
+    - What is the enrollment procedure?
+    - How do I enroll?
+    - How do I start my enrollment?
+    - What is the first step in enrolling?
+    - What should I do to begin enrollment?
+    - Where to apply for enrollment?
+responses:
+    - Go to UBaguio.edu portal and click 'apply as a new student'. Fill out the forms needed and then submit the admission requirements at the ARC.
+    -- For face to face, go directly to ARC to inquire the needed forms and submit.

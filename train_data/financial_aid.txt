@@ -1,0 +1,19 @@
+intent: financial_aid
+patterns:
+    - Are there scholarships?
+    - What financial aid is available?
+    - Can I get a discount?
+    - Are there student discounts?
+    - Any scholarships for freshmen?
+    - What aid is offered by UB?
+    - Available financial assistance
+    - Does UB offer scholarships?
+    - Can I apply for a discount?
+    - What are the scholarship programs?
+    - Financial support for students?
+    - Tuition discount options
+    - Do you have solo parent discounts?
+    - Are there PWD benefits?
+    - Sibling discount program?
+responses:
+    - UB offers scholarships and discounts like Academic Scholarship, Siblings Discount, Solo Parent Discount, PWD Discount, and AFPEBSO.

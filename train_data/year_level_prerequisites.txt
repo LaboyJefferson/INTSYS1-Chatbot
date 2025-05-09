@@ -1,0 +1,14 @@
+intent: year_level_prerequisites
+patterns:
+    - What are the prerequisites for second year?
+    - Do I need to finish all subjects before moving up?
+    - Requirements for next year level?
+    - How to be promoted to the next year?
+    - Can I advance if I have back subjects?
+    - UB year level requirements?
+    - How many units to proceed to 2nd year?
+    - Is there a cutoff for year promotion?
+    - What subjects are required before advancing?
+    - Rules for leveling up academic year?
+responses:
+    - Refer to your department’s curriculum guide or handbook for subject lists and prerequisites. You can also contact your program chair or Dean for personalized guidance.

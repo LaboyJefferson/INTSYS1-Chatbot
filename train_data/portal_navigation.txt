@@ -1,0 +1,16 @@
+intent: portal_navigation
+patterns:
+    - How do I use the online portal?
+    - How to add subjects using the portal?
+    - Steps to drop subject online
+    - Where is the enrollment button?
+    - Guide to navigating UB portal?
+    - How do I register classes online?
+    - Instructions for using the student portal?
+    - How to enroll using the online portal?
+    - How do I manage my schedule online?
+    - Steps to change subjects online
+    - Where can I find my enrolled subjects?
+    - How to check my classes in the portal?
+responses:
+    - Log in to https://portal.ubaguio.edu. Go to 'Enrollment', click '+' to add or 'x' to drop a subject. Review selections and proceed to payment to finalize changes.
