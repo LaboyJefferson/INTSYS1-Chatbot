@@ -5,7 +5,7 @@
   <title>SIT Enrollment Helper</title>
   <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
   * { box-sizing: border-box; }
 
@@ -220,14 +220,14 @@ body {
 <div class="sidebar" id="sidebar">
   <div>
     <div class="sidebar-header">
-      <img src="/static/images/logo.png" alt="Logo" class="logo" />
+      <img src="/images/logo.png" alt="Logo" class="logo" />
       <h1>SIT Helper</h1>
-      <img src="/static/images/sidebar.png" alt="Toggle Sidebar" class="sidebar-toggle" onclick="toggleSidebar()" />
+      <img src="/images/sidebar.png" alt="Toggle Sidebar" class="sidebar-toggle" onclick="toggleSidebar()" />
     </div>
     <div class="chat-history" id="chatHistoryList">
       <div class="chat-entry">
         <button onclick="startNewChat()">New Chat</button>
-        <img src="/static/images/delete.png" alt="Delete" onclick="deleteChat(0)" />
+        <img src="/images/delete.png" alt="Delete" onclick="deleteChat(0)" />
       </div>
     </div>
   </div>
@@ -236,7 +236,7 @@ body {
 
 <div class="chat-container">
   <div class="top-center">
-    <img src="/static/images/logo.png" alt="Logo" class="logo" />
+    <img src="/images/logo.png" alt="Logo" class="logo" />
     <h2>Welcome to the SIT Enrollment Helper</h2>
     <div class="question-buttons">
       <button onclick="sendQuick('What are the courses offered?')">What are the courses offered?</button>
@@ -289,8 +289,8 @@ body {
     const div = document.createElement("div");
     div.className = `message ${sender}`;
     div.innerHTML = sender === "bot"
-      ? `<div class="bubble"><strong>CODE-E</strong><p style="white-space: pre-line;">${message}</p></div><img src="/static/images/logo.png" alt="Bot" class="avatar" />`
-      : `<img src="/static/images/userIcon.png" alt="User" class="avatar" /><div class="bubble"><p>${message}</p></div>`;
+      ? `<div class="bubble"><strong>CODE-E</strong><p style="white-space: pre-line;">${message}</p></div><img src="/images/logo.png" alt="Bot" class="avatar" />`
+      : `<img src="/images/userIcon.png" alt="User" class="avatar" /><div class="bubble"><p>${message}</p></div>`;
     chatbox.appendChild(div);
     chatbox.scrollTop = chatbox.scrollHeight;
     currentChat.push({ sender, message });
@@ -326,7 +326,7 @@ body {
       btn.onclick = () => loadChat(index);
 
       const deleteIcon = document.createElement("img");
-      deleteIcon.src = "/static/images/delete.png";
+      deleteIcon.src = "/images/delete.png";
       deleteIcon.alt = "Delete";
       deleteIcon.onclick = (event) => {
         event.stopPropagation();
