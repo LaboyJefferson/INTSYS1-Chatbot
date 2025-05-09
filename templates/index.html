@@ -6,7 +6,215 @@
   <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+  * { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0e1b35;
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #1d2a47;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-right: 1px solid #2c3e50;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.sidebar-toggle {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.sidebar h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.chat-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .sidebar-header h1,
+.sidebar.collapsed .chat-history,
+.sidebar.collapsed .start-chat-button {
+  display: none;
+}
+
+.chat-container {
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-center {
+  text-align: center;
+}
+
+.top-center h2 {
+  margin: 1rem 0;
+}
+
+.question-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.question-buttons button {
+  background-color: #1d2a47;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  width: 200px;
+}
+
+.chatbox {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.message.user {
+  justify-content: flex-start;
+}
+
+.message.bot {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 60%;
+  padding: 1rem;
+  border-radius: 15px;
+  color: white;
+}
+
+.message.user .bubble {
+  background-color: #6a8fff;
+  text-align: left;
+}
+
+.message.bot .bubble {
+  background-color: #1d2a47;
+  text-align: left;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5rem;
+}
+
+.input-area {
+  display: flex;
+  background-color: #162035;
+  padding: 0.5rem;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.input-area input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.input-area button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.start-chat-button {
+  background: white;
+  color: black;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.chat-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2c3e50;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-entry button {
+  flex-grow: 1;
+  background: transparent;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chat-entry img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+  </style>
 </head>
+
 <body>
 
 <div class="sidebar" id="sidebar">
