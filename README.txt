@@ -18,8 +18,6 @@ Install the following:
 - torch == 2.7.0
 - nltk == 3.9.1
 - numpy == 2.2.5
-- spacy
-- gunicorn
 
 ### How to run
 
