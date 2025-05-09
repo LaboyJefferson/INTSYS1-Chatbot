@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request, render_template
 import trainer
 import os
 
+import nltk
+nltk.download('punkt_tab')
+
 app = Flask(__name__)
 
 @app.route("/")
