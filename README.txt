@@ -35,4 +35,4 @@ Install the following:
     Run the following command:
     > python server.py
 
-    The server will run locally, and the chatbot will be available at http://127.0.0.1:5000/.
+    The server will run locally.
