@@ -3,4 +3,3 @@ chatterbot==1.2.6
 torch==2.7.0
 nltk==3.9.1
 numpy==2.2.5
-spacy==3.7.2
